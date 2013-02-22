@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url('../fonts/agency_fb.eot');
+    src: url('../fonts/agency_fb.eot?#iefix') format('embedded-opentype'),
+     /* url('../fonts/agency_fb.woff') format('woff'), */
+        url('../fonts/agency_fb.ttf') format('truetype'),
+        url('../fonts/agency_fb.svg#AgencyFB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* UNIVERSAL */
+
+
+.body {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	color: #000000;
+	background-color: #666666;
+	overflow-y: scroll;
+	background-image: url(../images/bg.jpg);
+	background-attachment: fixed;
+}
+
+.loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -117px;
+}
+
+.title {
+	font-family: Agency FB;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.wrapper {
+	width: 1024px;
+	border-spacing: 50px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+.wrapper td {
+	vertical-align: top;
+}
+
+
+.header .wrapper {
+	margin-bottom: -10px;
+}
+
+
+.menu .wrapper {
+	table-layout: auto;
+	width: 1034px;
+	height: 60px;
+	border-spacing: 5px;
+	margin: 0 auto;
+	padding: 0px;
+	padding-right: 50px;
+	padding-left: 50px;
+	position: relative;
+	top: 5px;
+	color: #ffffff;
+	font-family: Agency FB;
+	letter-spacing: 2px;
+	font-size: 23px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.menu .wrapper td {
+	vertical-align: middle;
+	padding-top: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-image: url(../images/backdrop_menu.png);
+}
+
+.preload {
+	display: none;
+}
+
+img {
+	border: 0px;
+}
+
+.menu {
+	border-bottom: solid 20px #0092BD;
+}
+
+.main {
+	background-color: #ffffff;
+	background-image: url(../images/backdrop.png);
+	background-attachment: fixed;
+}
+
+a {
+	color: #0092BD;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #19abd6;
+}
+
+.table {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-spacing: 0px;
+}
+
+.rounded_cell {
+	padding: 50px;
+	text-align: justify;
+	vertical-align: top;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+}
+
+.details {
+	 width: 100%
+}
+
+.details td {
+	padding-bottom: 15px;
+}
+
+.input {
+	width: 90%;
+	font-family: Calibri;
+	font-size: 12pt;
+	letter-spacing: 1px;
+	padding-left: 6px;
+	padding-right: 10px;
+	margin-left: 4px;
+	height: 30px;
+	border: none;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+	color: #BBBBBB;
+}
+
+.required {
+	color: #FF0000;
+	font-family: Arial Black;
+	font-size: 20px;
+	position: relative;
+	left: -4px;
+}
+
+.spacer_left {
+	width: 50%;
+	padding-right: 10px;
+}
+
+.spacer_right {
+	width: 50%;
+	padding-left: 10px;
+}
+
+
+/* CONTACT */
+
+.contact {
+	background-color: #19abd6;
+}
+
+.contact_button {
+	background-color: #19abd6;
+	height: 40px;
+	width: 100px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	margin-top: -40px;
+}
+
+.contact_details {
+	text-align:left;
+	color: #ffffff;
+	font-family: Agency FB;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+
+/* FOOTER */
+
+
+.footer {
+	padding-top: 10px;
+	padding-bottom: 30px;
+	border-top: solid 10px #0092BD;
+}
+
+.footer .wrapper {
+	position: relative;
+	top: -11px;
+	border-spacing: 0px;
+	padding: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-family: Agency FB;
+	color: #FFFFFF;
+	font-size: 15px;
+	width: 1024px;
+	margin: 0 auto;
+	text-align: left;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.signature {
+	position: relative;
+	top: -5px;
+}
+
+.footermenu {
+	border-spacing: 5px;
+	position: relative;
+	top: -5px;
+	right: -5px;
+}
+
+.footermenu td {
+	height: 35px;
+	vertical-align: middle;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-image: url(../images/backdrop_menu.png);
+}
+
+.footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.signature a:hover {
+	color: #0092BD;
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+		<title>QMAXIMS</title>
+        <link rel="stylesheet" type="text/css" href="scripts/style.css"/>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+	    <script type="text/javascript" src="scripts/prototype.js"></script>
+		<script type="text/javascript" src="scripts/scriptaculous.js"></script>
+        <script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30163320-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body class="body">
+		<div id="loading" class="loading">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="234" height="300" align="middle">
+				<param name="movie" value="loading.swf" />
+				<param name="quality" value="high" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="loading.swf" width="234" height="300">
+					<param name="movie" value="loading.swf" />
+					<param name="quality" value="high" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="transparent" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+    	<div id="header" class="header" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                	<td align="left" style="vertical-align:bottom">
+                		<img src="images/tag_white.png" height="100"/>
+                    </td>
+                    <td align="right">
+                       	<img src="images/logo_white.png" height="140" onclick="togglePage()"/>
+                	</td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu" class="menu" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                	<td id="menu_1" onmouseover="menuOver('menu_1')" onmouseout="menuOut('menu_1')" onclick="menuClick('menu_1')" style="border-top-left-radius:20px">Home</td>
+                    <td id="menu_2" onmouseover="menuOver('menu_2')" onmouseout="menuOut('menu_2')" onclick="menuClick('menu_2')">Services</td>
+                    <td id="menu_3" onmouseover="menuOver('menu_3')" onmouseout="menuOut('menu_3')" onclick="menuClick('menu_3')">About Us</td>
+                    <td id="menu_4" onmouseover="menuOver('menu_4')" onmouseout="menuOut('menu_4')" onclick="menuClick('menu_4')">Compliance</td>
+                    <td id="menu_5" onmouseover="menuOver('menu_5')" onmouseout="menuOut('menu_5')" onclick="menuClick('menu_5')">Background</td>
+                    <td id="menu_6" onmouseover="menuOver('menu_6')" onmouseout="menuOut('menu_6')" onclick="menuClick('menu_6')" style="border-top-right-radius:20px">Contact</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_1" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                	<td colspan="2" class="rounded_cell">
+                        <font class="title">Under Development</font><br/>
+                        <br/>
+                        Thank you for visiting the website of QMaxims. Unfortunately, it is currently under development. In the meanwhile, please give us a call on the number mentioned on the <a href="javascript:;" onclick="menuClick('menu_6')">contact</a> page or alternatively, send us a question by using the contact <a href="javascript:;" onclick="menuClick('menu_6')">form</a>.
+                	</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_2" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu tellus, condimentum vitae fringilla vel, eleifend sed mauris. Phasellus quis malesuada turpis. Pellentesque dignissim hendrerit vulputate. Duis felis diam, rhoncus vel mollis quis, semper id sapien. Suspendisse potenti. Fusce lacus metus, consequat vestibulum tincidunt in, fringilla ut lectus. In pretium magna quis velit rutrum sed imperdiet ligula convallis.<br/>
+                        <br/>
+                        Nam sapien lorem, tincidunt quis pretium nec, placerat at velit. Vestibulum non quam justo, vel placerat enim. Morbi vel pellentesque felis. Nam egestas leo nec nibh hendrerit interdum. Quisque non leo nisl, ut porta metus. Morbi eleifend dolor at lectus ornare molestie. Maecenas a lorem et lacus vestibulum luctus pharetra ac tortor.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_3" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        Curabitur mollis bibendum ante a sagittis. Proin lorem sem, sollicitudin sed tempor id, semper at lorem. Aenean eros risus, vestibulum at iaculis et, cursus a libero. Nam id dui nibh, nec bibendum felis. Fusce sed nisi diam, sit amet tincidunt elit. Nulla vel turpis massa, vitae pretium sem. Quisque tincidunt commodo dignissim. Donec volutpat fermentum lorem, eu vehicula elit hendrerit vel. Suspendisse interdum gravida lectus, in tempus est sollicitudin vitae. Nullam vitae enim ac nisl venenatis accumsan. Donec non ipsum sapien.<br/>
+                        <br/>
+                        Curabitur mollis bibendum ante a sagittis. Proin lorem sem, sollicitudin sed tempor id, semper at lorem. Aenean eros risus, vestibulum at iaculis et, cursus a libero. Nam id dui nibh, nec bibendum felis. Fusce sed nisi diam, sit amet tincidunt elit. Nulla vel turpis massa, vitae pretium sem. Quisque tincidunt commodo dignissim. Donec volutpat fermentum lorem, eu vehicula elit hendrerit vel. Suspendisse interdum gravida lectus, in tempus est sollicitudin vitae. Nullam vitae enim ac nisl venenatis accumsan. Donec non ipsum sapien.<br/>
+                        <br/>
+                        Curabitur mollis bibendum ante a sagittis. Proin lorem sem, sollicitudin sed tempor id, semper at lorem. Aenean eros risus, vestibulum at iaculis et, cursus a libero. Nam id dui nibh, nec bibendum felis. Fusce sed nisi diam, sit amet tincidunt elit. Nulla vel turpis massa, vitae pretium sem. Quisque tincidunt commodo dignissim. Donec volutpat fermentum lorem, eu vehicula elit hendrerit vel. Suspendisse interdum gravida lectus, in tempus est sollicitudin vitae. Nullam vitae enim ac nisl venenatis accumsan. Donec non ipsum sapien.<br/>
+                        <br/>
+                        Curabitur mollis bibendum ante a sagittis. Proin lorem sem, sollicitudin sed tempor id, semper at lorem. Aenean eros risus, vestibulum at iaculis et, cursus a libero. Nam id dui nibh, nec bibendum felis. Fusce sed nisi diam, sit amet tincidunt elit. Nulla vel turpis massa, vitae pretium sem. Quisque tincidunt commodo dignissim. Donec volutpat fermentum lorem, eu vehicula elit hendrerit vel. Suspendisse interdum gravida lectus, in tempus est sollicitudin vitae. Nullam vitae enim ac nisl venenatis accumsan. Donec non ipsum sapien.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_4" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        Suspendisse consequat risus a purus consectetur vulputate. In ultrices dapibus leo, ut venenatis lacus condimentum at. Nunc metus quam, dapibus eu vehicula vitae, porta adipiscing quam. Vivamus eleifend tincidunt tortor at convallis. Sed cursus tortor non magna varius congue. Sed et leo tortor. Mauris tempus, massa a lobortis tincidunt, felis quam feugiat tortor, eu interdum lacus massa vel tellus.<br/>
+                        <br/>
+                        Nulla ac odio risus. Sed bibendum commodo lacus nec fringilla. Proin ut ipsum orci, et hendrerit massa. Vivamus viverra, ante vel fermentum accumsan, felis dolor dapibus leo, eget tempor nulla nunc venenatis nulla. Curabitur tortor nisi, congue at tristique sit amet, molestie sit amet enim. Aliquam erat volutpat. Curabitur sit amet felis non tellus tincidunt ultrices. Nunc ornare dapibus tincidunt. Integer quis ipsum enim.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_5" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        Etiam lacus nunc, pulvinar id faucibus sed, fringilla quis leo. Fusce ut libero velit. Sed ornare suscipit tincidunt. Nullam aliquet scelerisque interdum. Maecenas sed tellus mauris. In hac habitasse platea dictumst. Etiam tempor posuere venenatis. Nulla viverra varius vehicula.<br/>
+                        <br/>
+                        Ut pharetra lectus a nunc rhoncus scelerisque ullamcorper enim congue. Praesent ac purus est. Etiam tincidunt, dolor vel porta interdum, mi velit sollicitudin lacus, ac condimentum est diam quis elit. Aliquam interdum sagittis diam, vitae iaculis justo dictum id. Phasellus porta lorem vitae massa aliquet commodo. Aliquam et felis id arcu vehicula pharetra. Cras eget consequat ipsum. Aenean eu mi sed metus volutpat adipiscing. Nunc leo tellus, porttitor non luctus in, aliquam eu lectus.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_6" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        <font class="title">Contact Details</font><br/>
+                        <br/>
+                        <table class="details">
+                            <tr>
+                                <td style="padding-right:20px; vertical-align:top">Address</td>
+                                <td>
+                                    QMAXIMS<br/>
+                                    Pomonaweg 41<br/>
+                                    3633CZ, Vreeland<br/>
+                                    The Netherlands
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>info@qmaxims.com</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>+316 13595872</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="http://nl.linkedin.com/pub/maxim-scholten/6/6a/8b" target="_new"><img src="images/linkedin.png" height="20px" style="position:relative; top:4px"/></a></td>
+                            </tr>
+                        </table>
+	            	</td>
+                	<td width="55%" rowspan="2" class="rounded_cell">
+                        <font class="title">Contact Form</font><br/>
+                        <br/>
+                        <form name="contact_form">
+                            <input type="hidden" name="block_spam_bots" value="1"/>
+                            <table class="form_box" style="width:100%; padding-left:0px">
+                                <tr>
+                                    <td class="spacer_left">
+                                        <input class="input" type="text" name="name" style="width:85%" placeholder="Name"/><br/><br/>
+                                    </td>
+                                    <td class="spacer_right">
+                                        <input class="input" type="text" name="phone" style="width:85%" placeholder="Phone Number"/><br/><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="spacer_left">
+                                        <input class="input" type="text" name="email" style="width:85%" placeholder="Email"/><br/><br/>
+                                    </td>
+                                    <td class="spacer_right">
+                                        <input class="input" type="text" name="subject" style="width:85%" placeholder="Subject"/><br/><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="spacer">
+                                        <textarea class="input" type="text" rows="3" name="message" placeholder="Message" style="resize:vertical; width:93%; height:150px; padding-top:5px"></textarea>
+                                        <center><a href="javascript:;"><img src="images/send_out.png" onmouseover="this.src='images/send_in.png'" onmouseout="this.src='images/send_out.png'" style="margin-top:30px; margin-bottom:40px"/></a></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_7" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        <font class="title">Disclaimer</font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_8" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        <font class="title">Menu</font>
+                    </td>
+                    <td class="rounded_cell">
+                        <font class="title">Terms and Conditions</font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main" id="page_9" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                    <td class="rounded_cell">
+                        <font class="title">Explanation</font>
+                    </td>
+                    <td class="rounded_cell">
+                        <font class="title">Login</font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="footer" class="footer" style="display:none">
+        	<table class="wrapper">
+            	<tr>
+                	<td align="left" class="signature" style="vertical-align:middle">
+            			Copyright 2012 <a href="http://www.danielsdesign.nl/">Daniels Design</a>, All Rights Reserved.
+            		</td>
+                    <td align="right">
+                    	<table class="footermenu">
+                        	<tr>
+                                <td align="right" id="menu_7" onmouseover="menuOver('menu_7')" onmouseout="menuOut('menu_7')" onclick="menuClick('menu_7')" style="border-bottom-left-radius:10px">Disclaimer</td>
+                                <td align="right" id="menu_8" onmouseover="menuOver('menu_8')" onmouseout="menuOut('menu_8')" onclick="menuClick('menu_8')">Terms and Conditions</td>
+                                <td align="right" id="menu_9" onmouseover="menuOver('menu_9')" onmouseout="menuOut('menu_9')" onclick="menuClick('menu_9')" style="border-bottom-right-radius:10px">Admin</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="preload">
+        	<img src="images/send_in.png"/>
+        </div>
+        <script type="text/javascript">
+			function contactForm() {
+				var okSoFar = true;
+				with (document.contact_form) {
+					if (name.value == "" && okSoFar) {
+						okSoFar = false;
+						alert("Please enter your name.");
+						c_name.focus();
+					}
+					if (email.value.indexOf("@") == -1 && okSoFar) {
+						okSoFar = false;
+						alert("Please enter a valid email address.");
+						email.focus();
+					}
+					if (message.value == "" && okSoFar) {
+						okSoFar = false;
+						alert("Please leave a message.");
+						message.focus();
+					}
+					if (okSoFar == true) {
+						block_spam_bots.value = 4*3;
+						submit();
+					}
+				}
+			}
+			$('[placeholder]').focus(function() {
+			  var input = $(this);
+			  if (input.val() == input.attr('placeholder')) {
+				input.val('');
+				input.removeClass('placeholder');
+			  }
+			}).blur(function() {
+			  var input = $(this);
+			  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				input.addClass('placeholder');
+				input.val(input.attr('placeholder'));
+			  }
+			}).blur();
+		</script>
+        <script type="text/javascript">
+			sliding = true;
+			document.onload = initiate();
+			function initiate() {
+				/* decide which page to display */
+				pageName = window.location.href.split("?")[1];
+				if (typeof(pageName) == "undefined") {
+					activePage = "page_1";
+				}
+				if (pageName == "home") {
+					activePage = "page_1";
+				}
+				if (pageName == 'services') {
+					activePage = 'page_2';
+				}
+				if (pageName == 'about') {
+					activePage = 'page_3';
+				}
+				if (pageName == 'compliance') {
+					activePage = 'page_4';
+				}
+				if (pageName == 'background') {
+					activePage = 'page_5';
+				}
+				if (pageName == 'contact') {
+					activePage = 'page_6';
+				}
+				if (pageName == 'disclaimer') {
+					activePage = 'page_7';
+				}
+				if (pageName == 'terms') {
+					activePage = 'page_8';
+				}
+				if (pageName == 'admin') {
+					activePage = 'page_9';
+				}
+				number = activePage.split("_")[1];
+				activeMenu = 'menu_'.concat(number);
+				/* hide loading icon, display the page and make the menu tab active */
+				document.getElementById(activeMenu).style.backgroundColor = '#0092BD';
+				document.getElementById(activeMenu).style.backgroundImage = 'none';
+				document.getElementById('loading').style.display = 'none';
+				Effect.Appear(header, {duration:1});
+				Effect.Appear(menu, {duration:1});
+				Effect.Appear(activePage, {duration:1});
+				Effect.Appear(footer, {duration:1});
+				setTimeout("sliding = false", 1250);
+			}
+			/* code for the menu tabs' mouseover events */
+			function menuOver(hoveredMenu) {
+				if (hoveredMenu != activeMenu) {
+					document.getElementById(hoveredMenu).style.backgroundColor = '#0092BD';
+					document.getElementById(hoveredMenu).style.backgroundImage = 'none';
+					document.body.style.cursor = 'pointer';
+				}
+			}
+			function menuOut(hoveredMenu) {
+				if (hoveredMenu != activeMenu) {
+					document.getElementById(hoveredMenu).style.backgroundColor = 'transparent';
+					document.getElementById(hoveredMenu).style.backgroundImage = "url('images/backdrop_menu.png')";
+					document.body.style.cursor = 'default';
+				}
+				else {
+					document.body.style.cursor = 'default';
+				}
+			}
+			/* code for sliding pages */
+			function menuClick(hoveredMenu) {
+				if (document.getElementById(activePage).style.display != 'none') {
+					if (sliding == false) {
+						hoveredPage = 'page_'.concat(hoveredMenu.split("_")[1]);
+						if (hoveredMenu != activeMenu) {
+							document.getElementById(activeMenu).style.backgroundColor = 'transparent';
+							document.getElementById(activeMenu).style.backgroundImage = "url('images/backdrop_menu.png')";
+							document.getElementById(hoveredMenu).style.backgroundColor = '#0092BD';
+							document.getElementById(hoveredMenu).style.backgroundImage = 'none';
+							activeMenu = hoveredMenu;
+							/* determine direction */
+							if (activePage.split("_")[1] < hoveredPage.split("_")[1]) {
+								direction = 'right';
+							}
+							else {
+								direction = 'left';
+							}
+							/* use direction to slide correctly */
+							if (direction == 'left') {
+								sliding = true;
+								Effect.BlindUp(activePage, {duration:1.2});
+								Effect.SlideDown(hoveredPage, {duration:1.2});
+								setTimeout("sliding = false", 1250);
+							}
+							if (direction == 'right') {
+								sliding = true;
+								Effect.SlideUp(activePage, {duration:1.2});
+								Effect.BlindDown(hoveredPage, {duration:1.2});
+								setTimeout("sliding = false", 1250);
+							}
+							activePage = hoveredPage;
+							/* update url */
+							if (activePage == "page_1") {
+								pageName = "home";
+							}
+							if (activePage == 'page_2') {
+								pageName = 'services';
+							}
+							if (activePage == 'page_3') {
+								pageName = 'about';
+							}
+							if (activePage == 'page_4') {
+								pageName = 'compliance';
+							}
+							if (activePage == 'page_5') {
+								pageName = 'background';
+							}
+							if (activePage == 'page_6') {
+								pageName = 'contact';
+							}
+							if (activePage == 'page_7') {
+								pageName = 'disclaimer';
+							}
+							if (activePage == 'page_8') {
+								pageName = 'terms';
+							}
+							if (activePage == 'page_9') {
+								pageName = 'admin';
+							}
+							window.history.pushState("", pageName.charAt(0).toUpperCase() + pageName.slice(1), '?'.concat(pageName));
+						}
+					}
+				}
+			}
+			/* just for fun, toggle the page when the logo is clicked */
+			function togglePage() {
+				if (document.getElementById(activePage).style.display != 'none') {
+					Effect.SlideUp(activePage, {duration:1.2});
+				}
+				else {
+					Effect.SlideDown(activePage, {duration:1.2});
+				}
+			}
+			function toggleContact() {
+				Effect.toggle('contact', 'blind');
+			}
+        </script>
+	</body>
+</html>

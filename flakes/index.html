@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Daniels Design</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/styles.css"/>
+        <script src="assets/js/jquery-1.9.1-min.js"></script>
+        <script src="assets/js/jquery-ui-1.10.1-min.js"></script>
+        <script src="assets/js/auxilliary.js"></script>
+    </head>
+    <body>
+    	<div class="flake" id="flake_counter">0</div>
+		<div id="logo" class="container flake link" size="150">
+        	<div id="front">
+            	<img id="logo" src="assets/images/logo_white.png"/>
+            </div>
+            <div id="back" style="text-align: center">
+            	<h1>Biography</h1>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                Under Construction...
+            </div>
+        </div>
+        <div id="pitch" class="container flake" size="150">
+        	<div id="front">
+            	<h1 style="font-size: 60px; line-height: 79px;">Home</h1>
+            </div>
+        	<div id="back">
+                <h1>Daniels Design</h1>
+                Welcome to the website of Daniels Design; the home of a weird-ass web designer / app developer.<br/>
+                <br/>
+                I use the latest in PHP, JavaScript, HTML and CSS to make (dynamic) websites. As you can see, I personally like simple, almost minimalistic design and I love to make stuff interactive. Of course, I can cater to more conventional needs just as well...<br/>
+                <br/>
+                Next to making stuff for the web, I also love to develop apps for Android. You can see some examples in my <a onclick="switchContainer($('div#showcase'))">showcase</a> if you like!<br/>
+                <br/>
+                If you want to know what I can do for you, how quickly I can do it or how much it would cost, don't hesitate to <a onclick="switchContainer($('div#contact'))">contact</a> me!<br/>
+                <br/>
+                - Thijs Daniels
+			</div>
+        </div>
+        <div id="contact" class="container flake link" size="260">
+        	<div id="front">
+                <h1 style="font-size: 60px; line-height: 189px;">Contact</h1>
+            </div>
+            <div id="back">
+            	<h1>Contact</h1>
+                If you wish to contact me about anything at all, please use the form below. I will do my best to reply as soon as I can. If you would rather speak to me directly, you can reach me on <a tel:0031640235637>+31640235637</a> between 9 and 5 Dutch time.<br/>
+                <br/>
+                <form>
+                	<table class="form" id="contact_form" action="assets/php/contact_form.php" method="post">
+                    	<tr>
+                        	<td class="form_label">
+                            	Name
+                            </td>
+                            <td class="form_input">
+                            	<input type="text" id="contact_name" name="contact_name" />
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td class="form_label">
+                            	Email Address
+                            </td>
+                            <td class="form_input">
+                            	<input type="text" id="contact_email" name="contact_email" />
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td class="form_label">
+                            	Message
+                            </td>
+                            <td class="form_input">
+                            	<textarea id="contact_message" name="contact_message"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td class="form_label">
+                            </td>
+                            <td class="form_input">
+                            	<button type="submit">Send</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="showcase" class="container flake link" size="300">
+        	<div id="front">
+                <h1 style="font-size: 60px; line-height: 229px;">Showcase</h1>
+            </div>
+            <div id="back">
+            	<h1>Showcase</h1>
+                <div class="project" onclick="window.open('http://www.patchesthecat.nl/','_blank');" style="background: url(assets/images/project_patchesthecat.png);">
+                	<div class="title">
+                    	Patches the Cat
+                    </div>
+                    <div class="description">
+                    	The website for the recently founded Dutch folk band "Patches the Cat"
+                    </div>
+                </div>
+                <div class="project_spacer"></div>
+                <div class="project" onclick="window.open('showcase/qmaxims/index.html','_blank');" style="background: url(assets/images/project_qmaxims.png);">
+                	<div class="title">
+                    	QMaxims
+                    </div>
+                	<div class="description">
+                    	The website for a company in quality and compliance of human medical testing
+                    </div>
+                </div>
+                <div class="project_spacer"></div>
+                <div class="project" onclick="window.open('showcase/ucacademy/index.html','_blank');" style="background: url(assets/images/project_ucacademy.png);">
+                	<div class="title">
+                    	UC Academy
+                    </div>
+                	<div class="description">
+                    	The website for an organization in high-school exam training, a daughter of University College Utrecht
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
