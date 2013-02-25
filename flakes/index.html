@@ -35,7 +35,7 @@
             </div>
         	<div id="back">
                 <h1>Daniels Design</h1>
-                Welcome to the website of Daniels Design, the home of a crazy and passionate web designer / app developer.<br/>
+                Welcome to the website of Daniels Design, the home of an inventive and passionate web designer / app developer.<br/>
                 <br/>
                 I use the latest in PHP, JavaScript, HTML and CSS to make solid, dynamic websites. As you can see, I personally like simple, almost minimalistic design and I love to make stuff interactive. Of course, I can cater to more practical and conventional needs just as well. You can see some examples in my <a onclick="switchContainer($('div#showcase'))">showcase</a> if you like!<br/>
                 <br/>
@@ -54,8 +54,8 @@
             	<h1>Contact</h1>
                 If you wish to contact me about anything at all, please use the form below. I will do my best to reply as soon as I can. If you would rather speak to me directly, you can reach me on <a tel:0031640235637>+31640235637</a> between 9 and 5 Dutch time.<br/>
                 <br/>
-                <form>
-                	<table class="form" id="contact_form" action="assets/php/contact_form.php" method="post">
+                <form id="contact_form" action="assets/php/contact.php" method="post">
+                	<table class="form">
                     	<tr>
                         	<td class="form_label">
                             	Name
@@ -84,7 +84,8 @@
                         	<td class="form_label">
                             </td>
                             <td class="form_input">
-                            	<button type="submit">Send</button>
+                            	<br/>
+                            	<a class="big" onclick="submitContactForm()">Send</a>
                             </td>
                         </tr>
                     </table>

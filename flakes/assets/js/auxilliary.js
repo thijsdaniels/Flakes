@@ -231,6 +231,51 @@ function bindProjectDescriptions() {
 	});
 }
 
+function bindFormWarnings() {
+	$('form#contact_form input#contact_name').bind('blur', function() {
+		if(!$(this).val()) {
+			$(this).addClass('warning');
+		} else {
+			$(this).removeClass('warning');
+		}
+	});
+	$('form#contact_form input#contact_email').bind('blur', function() {
+		if(!$(this).val().match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i)) {
+			$(this).addClass('warning');
+		} else {
+			$(this).removeClass('warning');
+		}
+	});
+	$('form#contact_form textarea#contact_message').bind('blur', function() {
+		if(!$(this).val()) {
+			$(this).addClass('warning');
+		} else {
+			$(this).removeClass('warning');
+		}
+	});
+}
+
+function submitContactForm() {
+	var valid = true;
+	if (!$('form#contact_form input#contact_name').val()) {
+		$('form#contact_form input#contact_name').addClass('warning');
+		$('form#contact_form input#contact_name').effect('shake', {distance: 10, times: 2});
+		valid = false;
+	} if (!$('form#contact_form input#contact_email').val().match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i)) {
+		$('form#contact_form input#contact_email').addClass('warning');
+		$('form#contact_form input#contact_email').effect('shake', {distance: 10, times: 2});
+		valid = false;
+	} if (!$('form#contact_form textarea#contact_message').val()) {
+		$('form#contact_form textarea#contact_message').addClass('warning');
+		$('form#contact_form textarea#contact_message').effect('shake', {distance: 10, times: 2});
+		valid = false;
+	}
+	
+	if (valid) {
+		$('form#contact_form').submit();
+	}
+}
+
 // constructor
 $(document).bind('ready', function() {
 	
@@ -238,6 +283,8 @@ $(document).bind('ready', function() {
 	currentContainer = $('div#pitch').get();
 	
 	bindProjectDescriptions();
+	
+	bindFormWarnings();
 	
 	setInterval(function() {
 		generateFlake();
