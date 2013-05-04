@@ -212,32 +212,6 @@
         </div>
 	</center>
     <script type="text/javascript">
-		function contactForm() {
-			var okSoFar = true;
-			with (document.contact_form) {
-				if (c_name.value == "" && okSoFar) {
-					okSoFar = false;
-					alert("Please enter your name.");
-					c_name.focus();
-				}
-				if (c_email.value == "" && okSoFar) {
-					okSoFar = false;
-					alert ("Please enter a valid email address.");
-					c_email.focus();
-				}
-				if (c_message.value == "" && okSoFar) {
-					okSoFar = false;
-					alert("Please enter a message.");
-					c_message.focus();
-				}
-				if (okSoFar == true) {
-					c_block_spam_bots.value = 4*3;
-					submit();
-				}
-			}
-		}
-	</script>
-    <script type="text/javascript">
 		function feedbackForm() {
 			var okSoFar = true;
 			with (document.feedback_form) {

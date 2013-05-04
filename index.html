@@ -7,37 +7,20 @@
         <link rel="stylesheet" href="assets/css/styles.css"/>
         <script src="assets/js/jquery-1.9.1-min.js"></script>
         <script src="assets/js/jquery-ui-1.10.1-min.js"></script>
-        <script src="assets/js/auxilliary.js"></script>
+        <script src="assets/js/flakes-1.1.2-min.js"></script>
     </head>
     <body>
-    	<div class="flake" id="flake_counter">0</div>
-		<div id="logo" class="container flake link" size="150">
-        	<div id="front">
-            	<img id="logo" src="assets/images/logo_white.png"/>
-            </div>
-            <div id="back" style="text-align: center">
-            	<h1>Biography</h1>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                Coming Soon...
-            </div>
-        </div>
-        <div id="pitch" class="container flake" size="150">
+    	<div class="info" id="flake_counter"></div>
+        <div class="info" id="version">Version 1.0</div>
+        <div id="home" class="container flake" size="150">
         	<div id="front">
             	<h1 style="font-size: 60px; line-height: 79px;">Home</h1>
             </div>
         	<div id="back">
                 <h1>Daniels Design</h1>
-                Welcome to the website of Daniels Design, the home of an inventive and passionate web designer / app developer.<br/>
+                Welcome to the website of Daniels Design, home to a refreshing <a onclick="switchContainer($('div#bio'))">one-man</a> web and app development company.<br/>
                 <br/>
-                I use the latest in PHP, JavaScript, HTML and CSS to make solid, dynamic websites. As you can see, I personally like simple, almost minimalistic design and I love to make stuff interactive. Of course, I can cater to more practical and conventional needs just as well. You can see some examples in my <a onclick="switchContainer($('div#showcase'))">showcase</a> if you like!<br/>
+                I use the latest in PHP, JavaScript, HTML and CSS to make solid, dynamic websites. As you can see, I personally like simple, minimalistic (and nerdy) design and I love to make stuff interactive. Of course, I can cater to more practical and conventional needs just as well. You can see some examples in my <a onclick="switchContainer($('div#showcase'))">showcase</a> if you like!<br/>
                 <br/>
                 Next to making stuff for the web, I also love to develop apps for Android.<br/>
                 <br/>
@@ -45,6 +28,29 @@
                 <br/>
                 - Thijs Daniels
 			</div>
+        </div>
+		<div id="bio" class="container flake link" size="150">
+        	<div id="front">
+            	<img id="logo" src="assets/images/logo_trimmed.png"/>
+            </div>
+            <div id="back">
+            	<h1>Biography</h1>
+                You can see my <a href="assets/pdf/cv.pdf" target="_blank">Curriculum Vitae</a> and my <a href="http://nl.linkedin.com/pub/thijs-daniels/3b/446/332/" target="_blank">LinkedIn profile</a> for more information.<br/>
+                <br/>
+                I was born in the Netherlands on the 4th of April, 1989, which makes me <font id="age"></font> years old. As a kid I used to do lots of little science experiments together with my father (when he would be able to drag me away from my Nintendo, that is...), which might explain how I ended up doing something in applied sciences.<br/>
+                <br/>
+                Then one day, when I was around 12, I got a small book called 'My First Website', which explained the basics of web programming, and I was pretty much hooked immediately. I also downloaded a program called Game Maker and taught myself how to program simple platformer games and the like.<br/>
+                <br/>
+                During my high school years, where my curriculum was geared mostly towards history and economics, this hobby would stay a hobby as I never imagined a profession could be anything as fun as this.<br/>
+                <br/>
+                After high school I went to study at <a href="http://www.uu.nl/ucu" target="_blank">University College Utrecht</a>, the honors department of Utrecht University, where I majored in psychology and neuroscience. It was here that I really came to realize how incredibly useful it is to know how to program. In fact, it was recommended for many research projects and where most students resorted to PowerPoint slides or questionnaires to test their subjects, my group would be able to run our own customized piece of software.<br/>
+                <br/>
+                After receiving my Bachelor's degree with honors from UCU, I still wasn't convinced of a life of programming and so I decided to try a Master in Cognitive Neuroscience at the <a href="http://www.uva.nl/en/" target="_blank">University of Amsterdam</a>. When this program taught me of computer-simulations of neural networks, and all the amazing research done in the field of Artificial Intelligence, I just knew I had to go in that direction.<br/>
+                <br/>
+                I have since finished a pre-master in Artificial Intelligence and a minor in Computer Science, both at the University of Amsterdam, and will be enrolled in the master Computer Science at the <a href="http://www.vu.nl/en/" target="_blank">Vrije Universiteit</a> in Amsterdam, which is to start in September.<br/>
+                <br/>
+                In the mean time, I will have lots of fun developing websites and apps on demand.
+            </div>
         </div>
         <div id="contact" class="container flake link" size="260">
         	<div id="front">
@@ -98,7 +104,7 @@
             </div>
             <div id="back">
             	<h1>Showcase</h1>
-                <div class="project" onclick="window.open('http://www.patchesthecat.nl/','_blank');" style="background: url(assets/images/project_patchesthecat.png);">
+                <div class="project" onclick="window.open('http://www.patchesthecat.nl/', '_blank');" style="background: url(assets/images/project_patchesthecat.png);">
                 	<div class="title">
                     	Patches the Cat
                     </div>
@@ -107,7 +113,7 @@
                     </div>
                 </div>
                 <div class="project_spacer"></div>
-                <div class="project" onclick="window.open('showcase/qmaxims/index.html','_blank');" style="background: url(assets/images/project_qmaxims.png);">
+                <div class="project" onclick="window.open('showcase/qmaxims/index.html', '_blank');" style="background: url(assets/images/project_qmaxims.png);">
                 	<div class="title">
                     	QMaxims
                     </div>
@@ -116,7 +122,7 @@
                     </div>
                 </div>
                 <div class="project_spacer"></div>
-                <div class="project" onclick="window.open('showcase/ucacademy/index.html','_blank');" style="background: url(assets/images/project_ucacademy.png);">
+                <div class="project" onclick="window.open('showcase/ucacademy/index.html', '_blank');" style="background: url(assets/images/project_ucacademy.png);">
                 	<div class="title">
                     	UC Academy
                     </div>

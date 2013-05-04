@@ -1,4 +1,7 @@
+// Flakes v1.1.2 | (c) 2013 Daniels Design
+
 // globals
+var version = '1.1.2';
 var maxDepth = 15;
 var mouseX = Math.round($(window).width() * 0.5);
 var mouseY = Math.round($(window).height() * 0.5);
@@ -45,8 +48,8 @@ function generateFlake() {
 	$(flake).animate({top: movement}, {duration: 15000, easing: 'linear', queue: false});
 	$(flake).bind('click', function(event) {
 		$(flake).css({
-			'background-color': '#FC0',
-			'opacity': 0.75,
+			'background-color':		'#FC0',
+			'opacity':				0.75,
 		});
 	});
 	setTimeout(function() {
@@ -167,28 +170,28 @@ function switchContainer(newContainer) {
 
 function placeContainers() {
 	
-	var logoSize = parseInt($('div#logo').css('height'));
+	var logoSize = parseInt($('div#bio').css('height'));
 	var logoX = Math.round(($(window).width() * 0.15) - (logoSize * 0.5));
 	var logoY = Math.round(($(window).height() * 0.25) - (logoSize * 0.5));
-	$('div#logo').css({
+	$('div#bio').css({
 		'left': logoX,
 		'top': logoY,
 	});
-	$('div#logo').bind('click', function() {
-		switchContainer($('div#logo').get());
+	$('div#bio').bind('click', function() {
+		switchContainer($('div#bio').get());
 	});
 	
-	var pitchSize = parseInt($('div#pitch').css('height'));
+	var pitchSize = parseInt($('div#home').css('height'));
 	var pitchX = Math.round(($(window).width() * 0.5) - (pitchSize * 0.5));
 	var pitchY = Math.round(($(window).height() * 0.5) - (pitchSize * 0.5));
-	$('div#pitch').css({
+	$('div#home').css({
 		'left': pitchX,
 		'top': pitchY,
 	});
-	$('div#pitch div#front').css({'display': 'none', 'opacity': 0});
-	$('div#pitch div#back').css({'display': 'block', 'opacity': 1});
-	$('div#pitch').bind('click', function() {
-		switchContainer($('div#pitch').get());
+	$('div#home div#front').css({'display': 'none', 'opacity': 0});
+	$('div#home div#back').css({'display': 'block', 'opacity': 1});
+	$('div#home').bind('click', function() {
+		switchContainer($('div#home').get());
 	});
 	
 	var contactSize = parseInt($('div#contact').css('height'));
@@ -216,7 +219,7 @@ function placeContainers() {
 }
 
 function updateFlakeCounter() {
-	var numFlakes = "" + $('.flake').get().length;
+	var numFlakes = $('.flake').get().length + ' Flakes';
 	$('div#flake_counter').text(numFlakes);
 }
 
@@ -276,25 +279,60 @@ function submitContactForm() {
 	}
 }
 
+function bindAgeCounter() {
+	var birth = new Date(1989, 4, 4);
+	var birthMillis = birth.getTime();
+	setInterval(function() {
+		updateAge(birthMillis);
+	}, 1000);
+}
+
+var millisInSecond = 1000;
+var secondsInMinute = 60;
+var minutesInHour = 60;
+var hoursInDay = 24;
+var daysInYear = 365.24218967;
+	
+function updateAge(birthMillis) {
+	var ageMillis = Date.now() - birthMillis;
+	var ageYears = ageMillis / (millisInSecond * secondsInMinute * minutesInHour * hoursInDay * daysInYear);
+	ageYears = ageYears.toFixed(7);
+	$('#age').text(ageYears);
+}
+
 // constructor
 $(document).bind('ready', function() {
 	
-	placeContainers();
-	currentContainer = $('div#pitch').get();
+	// display the current version number
+	$('div#version').html('Version ' + version);
 	
+	// initialize the containers
+	placeContainers();
+	currentContainer = $('div#home').get();
+	
+	// bind mouse events to showcase descriptions
 	bindProjectDescriptions();
 	
+	// bind content checks to contact form elements
 	bindFormWarnings();
 	
+	// periodically update my age
+	bindAgeCounter();
+	
+	// start the flake generator
 	setInterval(function() {
 		generateFlake();
 		updateFlakeCounter();
 	}, 100);
 	
+	// bind mouse events to flake positions
 	$(this).bind('mousemove', function(event) {
 		mouseX = event.pageX;
 		mouseY = event.pageY;
 		moveFlakes($('div.flake').get(), mouseX, mouseY);
 	});
+	
+	// show the containers
+	$('div.container').fadeIn(500);
 	
 });
